@@ -3,288 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vélez SmartLink - Listas de Precios</title>
+    <title>Lista de Precios - Vélez SmartLink</title>
     <style>
+        :root {
+            --primary: #0077b6;
+            --secondary: #00b4d8;
+            --dark: #03045e;
+            --light: #caf0f8;
+            --text: #333;
+            --accent: #ffb703;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            background-color: #f8f9fa;
+            color: var(--text);
         }
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
             background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        .header {
+        header {
             text-align: center;
             margin-bottom: 30px;
+            border-bottom: 3px solid var(--light);
+            padding-bottom: 20px;
         }
-        .header h1 {
-            color: #0d233a;
-            font-size: 24px;
-            margin: 5px 0;
-        }
-        .header p {
-            color: #555;
-            font-size: 14px;
+        .logo-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: var(--dark);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            border-radius: 50%;
             font-weight: bold;
-            margin: 0;
-        }
-        .section-title {
+            font-size: 1.2rem;
             text-align: center;
-            color: #000;
-            font-size: 20px;
-            margin-top: 40px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: var(--primary);
+            border-left: 5px solid var(--secondary);
+            padding-left: 10px;
+            margin-top: 30px;
             margin-bottom: 15px;
-            text-transform: uppercase;
-            border-bottom: 2px solid #0d233a;
-            padding-bottom: 5px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         th, td {
-            border: 1px solid #333;
-            padding: 10px;
-            text-align: center;
-            font-size: 14px;
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
         }
         th {
-            background-color: #fff;
-            color: #000;
-            font-weight: bold;
-            font-size: 16px;
+            background-color: var(--light);
+            color: var(--dark);
         }
-        .promo-row {
-            background-color: #9abfd9;
+        .price {
+            font-weight: bold;
+            color: var(--primary);
+            text-align: right;
         }
         .old-price {
             text-decoration: line-through;
-            color: #555;
-            font-size: 13px;
-            display: block;
+            color: #888;
+            font-size: 0.9rem;
+            margin-right: 10px;
         }
-        .new-price {
+        .promo-tag {
+            background-color: var(--accent);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
             font-weight: bold;
-            color: #000;
-            font-size: 15px;
-            display: block;
+            margin-left: 10px;
         }
-        .description-cell {
-            text-align: left;
-        }
-        .footer-note {
-            font-size: 12px;
+        .notes {
+            font-size: 0.9rem;
             color: #666;
-            margin-top: 10px;
-            display: flex;
-            justify-content: space-between;
+            text-align: center;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <div class="logo-placeholder">
+                LOGO <br> VÉLEZ SMARTLINK
+            </div>
+            <h1>LISTA DE PRECIOS</h1>
+            <p>Innovación NFC - Conectividad Total</p>
+        </header>
 
-<div class="container">
-    <!-- Encabezado de Marca -->
-    <div class="header">
-        <h1>Vélez SmartLink</h1>
-        <p>INNOVACIÓN NFC<br>CONECTIVIDAD TOTAL</p>
+        <h2>Tarjetas NFC</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Descripción</th>
+                    <th style="text-align: right;">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tarjeta Sencilla</td>
+                    <td>Fondo blanco y logo de App</td>
+                    <td class="price">$160.00</td>
+                </tr>
+                <tr>
+                    <td>Tarjeta Transferencia</td>
+                    <td>Fondo color adaptado y logo de Banco</td>
+                    <td class="price">$220.00</td>
+                </tr>
+                <tr>
+                    <td>Tarjeta Personalizada</td>
+                    <td>Tarjeta QR, fondo y logo personalizado</td>
+                    <td class="price">$220.00</td>
+                </tr>
+                <tr>
+                    <td>PROMO 6x5 Sencillas</td>
+                    <td>6 tarjetas sencillas iguales al precio de 5</td>
+                    <td class="price"><span class="old-price">$960.00</span>$800.00<span class="promo-tag">6x5</span></td>
+                </tr>
+                <tr>
+                    <td>PROMO 6x5 Personalizadas</td>
+                    <td>6 tarjetas personalizadas iguales al precio de 5</td>
+                    <td class="price"><span class="old-price">$1320.00</span>$1100.00<span class="promo-tag">6x5</span></td>
+                </tr>
+                <tr>
+                    <td>Paquete 1</td>
+                    <td>1 Sencilla (FB/IG), 1 Personalizada (GMaps), 1 Personalizada (WhatsApp)</td>
+                    <td class="price"><span class="old-price">$600.00</span>$540.00</td>
+                </tr>
+                <tr>
+                    <td>Paquete 2</td>
+                    <td>Paquete 1 + 1 Tarjeta Transferencia (Cualquier banco)</td>
+                    <td class="price"><span class="old-price">$820.00</span>$740.00</td>
+                </tr>
+                <tr>
+                    <td>Paquete 3</td>
+                    <td>2 Sencillas (FB e IG), 1 Personalizada (GMaps), 1 Personalizada (WhatsApp), 1 Transferencia</td>
+                    <td class="price"><span class="old-price">$980.00</span>$880.00</td>
+                </tr>
+                <tr>
+                    <td>Paquete 4</td>
+                    <td>1 Personalizada (GMaps), 1 Personalizada (FB), 1 Personalizada (IG), 1 Personalizada (WhatsApp), 1 Transferencia</td>
+                    <td class="price"><span class="old-price">$1100.00</span>$990.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Letreros NFC</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Descripción</th>
+                    <th style="text-align: right;">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Letrero Sencillo</td>
+                    <td>Letrero con fondo color blanco y logo de App</td>
+                    <td class="price">$250.00</td>
+                </tr>
+                <tr>
+                    <td>Letrero Personalizado</td>
+                    <td>Letrero con QR, fondo y logo personalizado</td>
+                    <td class="price">$300.00</td>
+                </tr>
+                <tr>
+                    <td>PROMO 6x5 Sencillos</td>
+                    <td>6 letreros sencillos iguales al precio de 5</td>
+                    <td class="price"><span class="old-price">$1500.00</span>$1250.00<span class="promo-tag">6x5</span></td>
+                </tr>
+                <tr>
+                    <td>PROMO 6x5 Personalizados</td>
+                    <td>6 letreros personalizados iguales al precio de 5</td>
+                    <td class="price"><span class="old-price">$1800.00</span>$1500.00<span class="promo-tag">6x5</span></td>
+                </tr>
+                <tr>
+                    <td>Paquete 5</td>
+                    <td>1 Letrero personalizado (GMaps), 1 Tarjeta personalizada (WhatsApp), 1 Tarjeta Transferencia</td>
+                    <td class="price"><span class="old-price">$740.00</span>$670.00</td>
+                </tr>
+                <tr>
+                    <td>Paquete 6</td>
+                    <td>2 Letreros sencillos (FB e IG), 1 Letrero personalizado (GMaps), 1 Tarjeta (WhatsApp), 1 Transferencia</td>
+                    <td class="price"><span class="old-price">$1240.00</span>$1120.00</td>
+                </tr>
+                <tr>
+                    <td>Paquete 7</td>
+                    <td>1 Letrero personalizado (GMaps), 1 Letrero personalizado (FB), 1 Letrero personalizado (IG), 1 Tarjeta (WhatsApp), 1 Transferencia</td>
+                    <td class="price"><span class="old-price">$1340.00</span>$1200.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="notes">
+            <p>* Descuentos aleatorios en paquetes los días 1, 15, 16, 30 y 31 de cada mes.</p>
+            <p>* Vigencia de precios: 31/10/2026</p>
+        </div>
     </div>
-
-    <!-- LISTA DE PRECIOS TARJETAS -->
-    <div class="section-title">Lista de Precios Tarjetas</div>
-    <table>
-        <thead>
-            <tr>
-                <th>PRODUCTO</th>
-                <th>DESCRIPCIÓN</th>
-                <th>PRECIO</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Tarjeta sencilla</strong></td>
-                <td class="description-cell">Tarjeta con fondo color blanco y logo de App</td>
-                <td>$160.00</td>
-            </tr>
-            <tr>
-                <td><strong>Tarjeta Transferencia</strong></td>
-                <td class="description-cell">Tarjeta con fondo color adaptado y logo de Banco</td>
-                <td>$220.00</td>
-            </tr>
-            <tr>
-                <td><strong>Tarjeta Personalizada</strong></td>
-                <td class="description-cell">Tarjeta QR, fondo y logo personalizado</td>
-                <td>$220.00</td>
-            </tr>
-            <tr class="promo-row">
-                <td><strong>PROMO 6x5 Sencillas</strong></td>
-                <td class="description-cell"><strong>6 tarjetas sencillas</strong><br>iguales al precio de <strong>5</strong></td>
-                <td>
-                    <span class="old-price">$960.00</span>
-                    <span class="new-price">$800.00</span>
-                </td>
-            </tr>
-            <tr class="promo-row">
-                <td><strong>PROMO 6x5 Personalizadas</strong></td>
-                <td class="description-cell"><strong>6 tarjetas personalizada</strong><br>iguales al precio de <strong>5</strong></td>
-                <td>
-                    <span class="old-price">$1320.00</span>
-                    <span class="new-price">$1100.00</span>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Paquete 1</strong></td>
-                <td class="description-cell">
-                    <strong>1</strong> Tarjeta sencilla (Facebook o Instagram)<br>
-                    <strong>1</strong> Tarjeta personalizada (GMaps)<br>
-                    <strong>1</strong> Tarjeta personalizada (WhatsApp)
-                </td>
-                <td>
-                    <span class="old-price">$600.00</span>
-                    <span class="new-price">$540.00</span>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Paquete 2</strong></td>
-                <td class="description-cell">
-                    <strong>1</strong> Tarjeta sencilla (Facebook o Instagram)<br>
-                    <strong>1</strong> Tarjeta personalizada (GMaps)<br>
-                    <strong>1</strong> Tarjeta personalizada (WhatsApp)<br>
-                    <strong>1</strong> Tarjeta Transferencia (Cualquier banco)
-                </td>
-                <td>
-                    <span class="old-price">$820.00</span>
-                    <span class="new-price">$740.00</span>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Paquete 3</strong></td>
-                <td class="description-cell">
-                    <strong>2</strong> Tarjetas sencillas (Facebook e Instagram)<br>
-                    <strong>1</strong> Tarjeta personalizada (GMaps)<br>
-                    <strong>1</strong> Tarjeta personalizada (WhatsApp)<br>
-                    <strong>1</strong> Tarjeta Transferencia (Cualquier banco)
-                </td>
-                <td>
-                    <span class="old-price">$980.00</span>
-                    <span class="new-price">$880.00</span>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Paquete 4</strong></td>
-                <td class="description-cell">
-                    <strong>1</strong> Tarjeta personalizada (GMaps)<br>
-                    <strong>1</strong> Tarjeta personalizada (Facebook)<br>
-                    <strong>1</strong> Tarjeta personalizada (Instagram)<br>
-                    <strong>1</strong> Tarjeta personalizada (WhatsApp)<br>
-                    <strong>1</strong> Tarjeta Transferencia (Cualquier banco)
-                </td>
-                <td>
-                    <span class="old-price">$1100.00</span>
-                    <span class="new-price">$990.00</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="footer-note">
-        <span>Descuentos aleatorios en paquetes los días 1, 15, 16, 30 y 31 de cada mes.</span>
-        <span>Vigencia 31/10/2026</span>
-    </div>
-
-
-    <!-- LISTA DE PRECIOS LETREROS -->
-    <div class="section-title" style="margin-top: 60px;">Lista de Precios Letreros</div>
-    <table>
-        <thead>
-            <tr>
-                <th>PRODUCTO</th>
-                <th>DESCRIPCIÓN</th>
-                <th>PRECIO</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Letrero sencillo</strong></td>
-                <td class="description-cell">Letrero con fondo color blanco y logo de App</td>
-                <td>$250.00</td>
-            </tr>
-            <tr>
-                <td><strong>Letrero Personalizado</strong></td>
-                <td class="description-cell">Letrero con QR, fondo y logo personalizado</td>
-                <td>$300.00</td>
-            </tr>
-            <tr class="promo-row">
-                <td><strong>PROMO 6x5 Sencillos</strong></td>
-                <td class="description-cell"><strong>6 letreros sencillos</strong><br>iguales al precio de <strong>5</strong></td>
-                <td>
-                    <span class="old-price">$1500.00</span>
-                    <span class="new-price">$1250.00</span>
-                </td>
-            </tr>
-            <tr class="promo-row">
-                <td><strong>PROMO 6x5 Personalizados</strong></td>
-                <td class="description-cell"><strong>6 letreros personalizados</strong><br>iguales al precio de <strong>5</strong></td>
-                <td>
-                    <span class="old-price">$1800.00</span>
-                    <span class="new-price">$1500.00</span>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Paquete 5</strong></td>
-                <td class="description-cell">
-                    <strong>1</strong> Letrero personalizado (GMaps)<br>
-                    <strong>1</strong> Tarjeta personalizada (WhatsApp)<br>
-                    <strong>1</strong> Tarjeta Transferencia (Cualquier banco)
-                </td>
-                <td>
-                    <span class="old-price">$740.00</span>
-                    <span class="new-price">$670.00</span>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Paquete 6</strong></td>
-                <td class="description-cell">
-                    <strong>2</strong> Letreros sencillos (Facebook e Instagram)<br>
-                    <strong>1</strong> Letrero personalizado (GMaps)<br>
-                    <strong>1</strong> Tarjeta personalizada (WhatsApp)<br>
-                    <strong>1</strong> Tarjeta Transferencia (Cualquier banco)
-                </td>
-                <td>
-                    <span class="old-price">$1240.00</span>
-                    <span class="new-price">$1120.00</span>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Paquete 7</strong></td>
-                <td class="description-cell">
-                    <strong>1</strong> Letrero personalizado (GMaps)<br>
-                    <strong>1</strong> Letrero personalizado (Facebook)<br>
-                    <strong>1</strong> Letrero personalizado (Instagram)<br>
-                    <strong>1</strong> Tarjeta personalizada (WhatsApp)<br>
-                    <strong>1</strong> Tarjeta Transferencia (Cualquier banco)
-                </td>
-                <td>
-                    <span class="old-price">$1340.00</span>
-                    <span class="new-price">$1200.00</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="footer-note">
-        <span>Descuentos aleatorios en paquetes los días 1, 15, 16, 30 y 31 de cada mes.</span>
-        <span>Vigencia 31/10/2026</span>
-    </div>
-
-</div>
-
 </body>
 </html>
-
