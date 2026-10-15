@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vélez SmartLink - Innovación NFC</title>
+    <!-- Enlace a la librería FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -25,13 +27,25 @@
         .logo-img {
             max-width: 120px;
             height: auto;
+            margin-bottom: 5px;
+        }
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 30px;
             font-size: 16px;
             font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        nav a i {
+            font-size: 20px;
         }
         nav a:hover {
             color: #87ceeb;
@@ -86,19 +100,24 @@
                 padding: 15px;
             }
             .logo-img {
-                margin-bottom: 15px;
+                margin-bottom: 10px;
             }
             nav {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                gap: 15px;
+                gap: 20px;
                 width: 100%;
                 flex-wrap: wrap;
             }
             nav a {
                 margin: 0;
                 font-size: 14px;
+                flex-direction: column;
+                gap: 5px;
+            }
+            nav a i {
+                font-size: 18px;
             }
             main {
                 text-align: center;
@@ -132,10 +151,18 @@
         <img src="NoFondoLogoVelez.png" alt="Logo Vélez SmartLink" class="logo-img">
     </div>
     <nav>
-        <a href="http://wa.me/5666140182" target="_blank">WhatsApp</a>
-        <a href="https://www.facebook.com/share/1C3goSpDkD/" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/_velez_smartlink_?stkn=MXZla3RmZ3RxNTC=" target="_blank">Instagram</a>
-        <a href="Servicios.html">Servicios</a>
+        <a href="http://wa.me/5666140182" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://www.facebook.com/share/1C3goSpDkD/" target="_blank">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/_velez_smartlink_?stkn=MXZla3RmZ3RxNTC=" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="Servicios.html">
+            <i class="fas fa-star"></i> Servicios
+        </a>
     </nav>
 </header>
 
