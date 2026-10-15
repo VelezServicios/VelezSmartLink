@@ -8,56 +8,76 @@
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 10px;
             background-color: #f4f4f9;
             color: #333;
+Aquí tienes el código completo en un bloque separado para copiarlo fácilmente.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Precios - Vélez SmartLink</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f4f4f9;
+            color: #333;
+            font-size: 14px;
         }
         .container {
             max-width: 800px;
             margin: auto;
             background: #fff;
-            padding: 30px;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .logo {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .logo img {
-            max-width: 300px;
+            max-width: 200px;
             height: auto;
         }
         h1 {
             text-align: center;
             color: #1a252c;
             margin-bottom: 5px;
+            font-size: 20px;
         }
         h2 {
             background-color: #4267B2;
             color: white;
-            padding: 10px;
-            margin-top: 30px;
+            padding: 8px;
+            margin-top: 20px;
             margin-bottom: 10px;
             border-radius: 4px;
-            font-size: 20px;
+            font-size: 16px;
             text-align: center;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 30px;
-            table-layout: fixed;
+            margin-bottom: 20px;
+            font-size: 12px;
         }
         th, td {
-            padding: 12px;
+            padding: 8px;
             text-align: left;
             border: 1px solid #4267B2;
-            white-space: nowrap;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         th {
             background-color: #87ceeb;
             color: white;
+            font-size: 13px;
         }
         .price-old {
             text-decoration: line-through;
@@ -76,9 +96,9 @@
         }
         .footer-note {
             text-align: center;
-            font-size: 0.9em;
+            font-size: 0.8em;
             color: #666;
-            margin-top: 30px;
+            margin-top: 20px;
             font-style: italic;
         }
     </style>
@@ -96,9 +116,9 @@
     <table>
         <thead>
             <tr>
-                <th style="width: 25%;">PRODUCTO</th>
-                <th style="width: 50%;">DESCRIPCIÓN</th>
-                <th style="width: 25%;">PRECIO</th>
+                <th>PRODUCTO</th>
+                <th>DESCRIPCIÓN</th>
+                <th>PRECIO</th>
             </tr>
         </thead>
         <tbody>
@@ -192,9 +212,9 @@
     <table>
         <thead>
             <tr>
-                <th style="width: 25%;">PRODUCTO</th>
-                <th style="width: 50%;">DESCRIPCIÓN</th>
-                <th style="width: 25%;">PRECIO</th>
+                <th>PRODUCTO</th>
+                <th>DESCRIPCIÓN</th>
+                <th>PRECIO</th>
             </tr>
         </thead>
         <tbody>
@@ -253,7 +273,7 @@
                 <td>Paquete 7</td>
                 <td>
                     1 Exhibidor personalizado (GMaps)<br>
-                    1 Exhibidor personalizado (Facebook)<br>
+                    1 Exhibidor personalized (Facebook)<br>
                     1 Exhibidor personalizado (Instagram)<br>
                     1 Tarjeta personalizada (WhatsApp)<br>
                     1 Tarjeta Transferencia (Cualquier banco)
