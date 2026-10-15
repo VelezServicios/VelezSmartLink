@@ -1,187 +1,320 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Lista de Precios - Vélez SmartLink</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f9;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .logo {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .logo img {
-            max-width: 150px;
-        }
-        h1 {
-            text-align: center;
-            color: #2d6a4f;
-            margin-bottom: 5px;
-        }
-        h2 {
-            border-bottom: 2px solid #87ceeb;
-            padding-bottom: 5px;
-            color: #2d6a4f;
-            margin-top: 30px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #2d6a4f;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .price-old {
-            text-decoration: line-through;
-            color: #888;
-            font-size: 0.9em;
-            margin-right: 10px;
-        }
-        .price-current {
-            font-weight: bold;
-            color: #000;
-        }
-        .sky-blue-bar {
-            height: 10px;
-            background-color: #87ceeb;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de Precios - Vélez SmartLink</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 20px;
+background-color: #f4f4f9;
+color: #333;
+}
+.container {
+max-width: 800px;
+margin: auto;
+background: #fff;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.logo {
+text-align: center;
+margin-bottom: 20px;
+}
+.logo img {
+max-width: 300px;
+height: auto;
+}
+h1 {
+text-align: center;
+color: #1a252c;
+margin-bottom: 5px;
+}
+h2 {
+color: #fff;
+background-color: #086657;
+padding: 10px;
+border-radius: 4px;
+margin-top: 30px;
+font-size: 20px;
+}
+h3 {
+color: #086657;
+border-bottom: 2px solid #87ceeb;
+padding-bottom: 5px;
+margin-top: 20px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 20px 0;
+}
+th, td {
+padding: 12px;
+text-align: left;
+border-bottom: 1px solid #ddd;
+}
+th {
+background-color: #f2f9f8;
+color: #086657;
+}
+.price-old {
+text-decoration: line-through;
+color: #999;
+font-size: 0.9em;
+display: block;
+}
+.price-new {
+font-weight: bold;
+color: #000;
+font-size: 1.1em;
+}
+.price-single {
+font-weight: bold;
+color: #000;
+}
+.sky-blue-bar {
+height: 8px;
+background-color: #87ceeb;
+margin: 20px 0;
+}
+.package-list {
+margin: 0;
+padding-left: 20px;
+}
+.footer-note {
+text-align: center;
+font-size: 0.9em;
+color: #666;
+margin-top: 30px;
+font-style: italic;
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="VelezLogo.jpg" alt="Vélez SmartLink Logo">
-        </div>
-        
-        <h1>LISTA DE PRECIOS</h1>
-
-        <div class="sky-blue-bar"></div>
-
-        <h2>Tarjetas NFC</h2>
-        <table>
-            <tr>
-                <th>Producto</th>
-                <th>Descripción</th>
-                <th>Precio</th>
-            </tr>
-            <tr>
-                <td>Tarjeta sencilla</td>
-                <td>Tarjeta con fondo color blanco y logo de App</td>
-                <td><span class="price-current">$160.00</span></td>
-            </tr>
-            <tr>
-                <td>Tarjeta Transferencia</td>
-                <td>Tarjeta con fondo color adaptado y logo de Banco</td>
-                <td><span class="price-current">$220.00</span></td>
-            </tr>
-            <tr>
-                <td>Tarjeta Personalizada</td>
-                <td>Tarjeta QR, fondo y logo personalizado</td>
-                <td><span class="price-current">$220.00</span></td>
-            </tr>
-            <tr>
-                <td>PROMO 6x5 Sencillas</td>
-                <td>6 tarjetas sencillas</td>
-                <td><span class="price-old">$960.00</span><span class="price-current">$800.00</span></td>
-            </tr>
-            <tr>
-                <td>PROMO 6x5 Personalizadas</td>
-                <td>6 tarjetas personalizadas</td>
-                <td><span class="price-old">$1320.00</span><span class="price-current">$1100.00</span></td>
-            </tr>
-            <tr>
-                <td>Paquete 1</td>
-                <td>1 Tarjeta sencilla (Facebook o Instagram), 1 Personalizada (GMaps), 1 Personalizada (WhatsApp)</td>
-                <td><span class="price-current">$540.00</span></td>
-            </tr>
-            <tr>
-                <td>Paquete 2</td>
-                <td>1 Tarjeta sencilla (Facebook o Instagram), 1 Personalizada (GMaps)</td>
-                <td><span class="price-current">$740.00</span></td>
-            </tr>
-            <tr>
-                <td>Paquete 3</td>
-                <td>2 Sencillas (Facebook e Instagram), 1 Personalizada (GMaps), 1 Personalizada (WhatsApp), 1 Transferencia</td>
-                <td><span class="price-current">$880.00</span></td>
-            </tr>
-            <tr>
-                <td>Paquete 4</td>
-                <td>1 Personalizada (GMaps), 1 Personalizada (Facebook), 1 Personalizada (Instagram), 1 Personalizada (WhatsApp), 1 Transferencia</td>
-                <td><span class="price-current">$990.00</span></td>
-            </tr>
-        </table>
-
-        <div class="sky-blue-bar"></div>
-
-        <h2>Exhibidores NFC</h2>
-        <table>
-            <tr>
-                <th>Producto</th>
-                <th>Descripción</th>
-                <th>Precio</th>
-            </tr>
-            <tr>
-                <td>Exhibidor sencillo</td>
-                <td>Exhibidor con fondo color blanco y logo de App</td>
-                <td><span class="price-current">$250.00</span></td>
-            </tr>
-            <tr>
-                <td>Exhibidor Personalizado</td>
-                <td>Exhibidor con QR, fondo y logo personalizado</td>
-                <td><span class="price-current">$300.00</span></td>
-            </tr>
-            <tr>
-                <td>PROMO 6x5 Sencillos</td>
-                <td>6 exhibidores sencillos iguales al precio de 5</td>
-                <td><span class="price-old">$1500.00</span><span class="price-current">$1250.00</span></td>
-            </tr>
-            <tr>
-                <td>PROMO 6x5 Personalizados</td>
-                <td>6 exhibidores personalizados</td>
-                <td><span class="price-old">$1800.00</span><span class="price-current">$1500.00</span></td>
-            </tr>
-            <tr>
-                <td>Paquete 5</td>
-                <td>1 Exhibidor personalizado (GMaps)
-                    1 Tarjeta personalizada (WhatsApp)
-                    1 Transferencia (Cualquier banco)</td>
-                <td><span class="price-current">$670.00</span></td>
-            </tr>
-            <tr>
-                <td>Paquete 6</td>
-                <td>2 Exhibidores sencillos (Facebook e Instagram), 1 Tarjeta personalizada (WhatsApp), 1 Transferencia (Cualquier banco)</td>
-                <td><span class="price-current">$1120.00</span></td>
-            </tr>
-            <tr>
-                <td>Paquete 7</td>
-                <td>1 Exhibidor personalizado (GMaps), 1 Exhibidor personalizado (Facebook), 1 Exhibidor personalizado (Instagram), 1 Tarjeta personalizada (WhatsApp), 1 Transferencia (Cualquier banco)</td>
-                <td><span class="price-current">$1200.00</span></td>
-            </tr>
-        </table>
-    </div>
+<div class="container">
+<div class="logo">
+<img src="VelezLogo.jpg" alt="Logo Vélez SmartLink">
+</div>
+<h1>LISTA DE PRECIOS</h1>
+<div class="sky-blue-bar"></div>
+<h2>Tarjetas NFC</h2>
+<table>
+<thead>
+<tr>
+<th>PRODUCTO</th>
+<th>DESCRIPCIÓN</th>
+<th>PRECIO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tarjeta sencilla</td>
+<td>Tarjeta con fondo color blanco y logo de App</td>
+<td class="price-single">$160.00</td>
+</tr>
+<tr>
+<td>Tarjeta Transferencia</td>
+<td>Tarjeta con fondo color adaptado y logo de Banco</td>
+<td class="price-single">$220.00</td>
+</tr>
+<tr>
+<td>Tarjeta Personalizada</td>
+<td>Tarjeta QR, fondo y logo personalizado</td>
+<td class="price-single">$220.00</td>
+</tr>
+<tr>
+<td>PROMO 6x5 Sencillas</td>
+<td>6 tarjetas sencillas iguales al precio de 5</td>
+<td>
+<span class="price-old">$960.00</span>
+<span class="price-new">$800.00</span>
+</td>
+</tr>
+<tr>
+<td>PROMO 6x5 Personalizadas</td>
+<td>6 tarjetas personalizadas iguales al precio de 5</td>
+<td>
+<span class="price-old">$1320.00</span>
+<span class="price-new">$1100.00</span>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Paquetes de Tarjetas</h3>
+<table>
+<thead>
+<tr>
+<th>PAQUETE</th>
+<th>DESCRIPCIÓN</th>
+<th>PRECIO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paquete 1</td>
+<td>
+<ul class="package-list">
+<li>1 Tarjeta sencilla (Facebook o Instagram)</li>
+<li>1 Tarjeta personalizada (GMaps)</li>
+<li>1 Tarjeta personalizada (WhatsApp)</li>
+</ul>
+</td>
+<td>
+<span class="price-old">$600.00</span>
+<span class="price-new">$540.00</span>
+</td>
+</tr>
+<tr>
+<td>Paquete 2</td>
+<td>
+<ul class="package-list">
+<li>1 Tarjeta sencilla (Facebook o Instagram)</li>
+<li>1 Tarjeta personalizada (GMaps)</li>
+<li>1 Tarjeta personalizada (WhatsApp)</li>
+<li>1 Tarjeta Transferencia (Cualquier banco)</li>
+</ul>
+</td>
+<td>
+<span class="price-old">$820.00</span>
+<span class="price-new">$740.00</span>
+</td>
+</tr>
+<tr>
+<td>Paquete 3</td>
+<td>
+<ul class="package-list">
+<li>2 Tarjetas sencillas (Facebook e Instagram)</li>
+<li>1 Tarjeta personalizada (GMaps)</li>
+<li>1 Tarjeta personalizada (WhatsApp)</li>
+<li>1 Tarjeta Transferencia (Cualquier banco)</li>
+</ul>
+</td>
+<td>
+<span class="price-old">$980.00</span>
+<span class="price-new">$880.00</span>
+</td>
+</tr>
+<tr>
+<td>Paquete 4</td>
+<td>
+<ul class="package-list">
+<li>1 Tarjeta personalizada (GMaps)</li>
+<li>1 Tarjeta personalizada (Facebook)</li>
+<li>1 Tarjeta personalizada (Instagram)</li>
+<li>1 Tarjeta personalizada (WhatsApp)</li>
+<li>1 Tarjeta Transferencia (Cualquier banco)</li>
+</ul>
+</td>
+<td>
+<span class="price-old">$1100.00</span>
+<span class="price-new">$990.00</span>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sky-blue-bar"></div>
+<h2>Exhibidores NFC</h2>
+<table>
+<thead>
+<tr>
+<th>PRODUCTO</th>
+<th>DESCRIPCIÓN</th>
+<th>PRECIO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exhibidor sencillo</td>
+<td>Exhibidor con fondo color blanco y logo de App</td>
+<td class="price-single">$250.00</td>
+</tr>
+<tr>
+<td>Exhibidor Personalizado</td>
+<td>Exhibidor con QR, fondo y logo personalizado</td>
+<td class="price-single">$300.00</td>
+</tr>
+<tr>
+<td>PROMO 6x5 Sencillos</td>
+<td>6 exhibidores sencillos iguales al precio de 5</td>
+<td>
+<span class="price-old">$1500.00</span>
+<span class="price-new">$1250.00</span>
+</td>
+</tr>
+<tr>
+<td>PROMO 6x5 Personalizados</td>
+<td>6 exhibidores personalizados iguales al precio de 5</td>
+<td>
+<span class="price-old">$1800.00</span>
+<span class="price-new">$1500.00</span>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Paquetes de Exhibidores</h3>
+<table>
+<thead>
+<tr>
+<th>PAQUETE</th>
+<th>DESCRIPCIÓN</th>
+<th>PRECIO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paquete 5</td>
+<td>
+<ul class="package-list">
+<li>1 Exhibidor personalizado (GMaps)</li>
+<li>1 Tarjeta personalizada (WhatsApp)</li>
+<li>1 Tarjeta Transferencia (Cualquier banco)</li>
+</ul>
+</td>
+<td>
+<span class="price-old">$740.00</span>
+<span class="price-new">$670.00</span>
+</td>
+</tr>
+<tr>
+<td>Paquete 6</td>
+<td>
+<ul class="package-list">
+<li>2 Exhibidores sencillos (Facebook e Instagram)</li>
+<li>1 Exhibidor personalizado (GMaps)</li>
+<li>1 Tarjeta personalizada (WhatsApp)</li>
+<li>1 Tarjeta Transferencia (Cualquier banco)</li>
+</ul>
+</td>
+<td>
+<span class="price-old">$1240.00</span>
+<span class="price-new">$1120.00</span>
+</td>
+</tr>
+<tr>
+<td>Paquete 7</td>
+<td>
+<ul class="package-list">
+<li>1 Exhibidor personalizado (GMaps)</li>
+<li>1 Exhibidor personalizado (Facebook)</li>
+<li>1 Exhibidor personalizado (Instagram)</li>
+<li>1 Tarjeta personalizada (WhatsApp)</li>
+<li>1 Tarjeta Transferencia (Cualquier banco)</li>
+</ul>
+</td>
+<td>
+<span class="price-old">$1340.00</span>
+<span class="price-new">$1200.00</span>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="footer-note">
+* Descuentos aleatorios en paquetes los días 1, 15, 16, 30 y 31 de cada mes. Vigencia 31/10/2026.
+</div>
+</div>
 </body>
 </html>
