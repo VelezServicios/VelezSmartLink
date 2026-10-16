@@ -11,6 +11,22 @@
             padding: 10px;
             background-color: #f4f4f9;
             color: #333;
+Aquí tienes el código completo en un bloque separado para copiarlo fácilmente.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Precios - Vélez SmartLink</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f4f4f9;
+            color: #333;
             font-size: 14px;
         }
         .container {
@@ -85,17 +101,6 @@
             margin-top: 20px;
             font-style: italic;
         }
-        /* Estilos del contador de visitas */
-        .visit-counter {
-            text-align: center;
-            margin-top: 15px;
-            padding: 8px;
-            background-color: #eef2f5;
-            border-radius: 4px;
-            font-size: 0.85em;
-            color: #555;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
@@ -123,7 +128,6 @@
                 <td>
                     <span class="price-old">$200.00</span>
                     <span class="price-new">$160.00</span>
-                </td>
             </tr>
             <tr>
                 <td>Tarjeta Transferencia</td>
@@ -131,7 +135,6 @@
                 <td>
                     <span class="price-old">$240.00</span>
                     <span class="price-new">$210.00</span>
-                </td>
             </tr>
             <tr>
                 <td>Tarjeta Personalizada</td>
@@ -139,7 +142,6 @@
                 <td>
                     <span class="price-old">$270.00</span>
                     <span class="price-new">$225.00</span>
-                </td>
             </tr>
             <tr>
                 <td>PROMO 6x5 Sencillas</td>
@@ -228,7 +230,6 @@
                 <td>
                     <span class="price-old">$300.00</span>
                     <span class="price-new">$250.00</span>
-                </td>
             </tr>
             <tr>
                 <td>Exhibidor Personalizado</td>
@@ -236,7 +237,6 @@
                 <td>
                     <span class="price-old">$400.00</span>
                     <span class="price-new">$300.00</span>
-                </td>
             </tr>
             <tr>
                 <td>PROMO 6x5 Sencillos</td>
@@ -283,7 +283,7 @@
                 <td>Paquete 7</td>
                 <td>
                     1 Exhibidor personalizado (GMaps)<br>
-                    1 Exhibidor personalizado (Facebook)<br>
+                    1 Exhibidor personalized (Facebook)<br>
                     1 Exhibidor personalizado (Instagram)<br>
                     1 Tarjeta personalizada (WhatsApp)<br>
                     1 Tarjeta Transferencia (Cualquier banco)
@@ -296,26 +296,10 @@
         </tbody>
     </table>
 
-    <div class="visit-counter">
-        👁️ Visitas totales: <span id="visits">Cargando...</span>
-    </div>
-
     <div class="footer-note">
         * Vigencia 31/10/2026.
     </div>
 </div>
-
-<script>
-    // Contador de visitas usando CountAPI
-    fetch('https://api.countapi.xyz/hit/velezsmartlink-precios/visitas')
-        .then(res => res.json())
-        .then(res => {
-            document.getElementById('visits').innerText = res.value;
-        })
-        .catch(() => {
-            document.getElementById('visits').innerText = '1+';
-        });
-</script>
 
 </body>
 </html>
