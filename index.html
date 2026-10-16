@@ -205,7 +205,7 @@
 
 <script>
     // Contador de visitas para la página principal
-    fetch('https://countapi.mileshilliard.com/hit/velezsmartlink-index/visitas')
+    fetch('https://countapi.mileshilliard.com/api/v1/hit/velezsmartlink-index')
         .then(res => res.json())
         .then(res => {
             document.getElementById('visits').innerText = res.value;
