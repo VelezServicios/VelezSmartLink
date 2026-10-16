@@ -94,6 +94,23 @@
             border-radius: 10px;
         }
 
+        /* Estilos del contador de visitas */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(10, 31, 68, 0.6);
+            font-size: 14px;
+            color: #87ceeb;
+        }
+        .visit-counter {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 18px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            font-weight: bold;
+        }
+
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -179,6 +196,24 @@
         <img src="FotosWeb.gif" alt="Imagen Principal de la Empresa" class="main-img">
     </div>
 </main>
+
+<footer>
+    <div class="visit-counter">
+        👁️ Visitas totales: <span id="visits">Cargando...</span>
+    </div>
+</footer>
+
+<script>
+    // Contador de visitas para la página principal
+    fetch('https://api.countapi.xyz/hit/velezsmartlink-index/visitas')
+        .then(res => res.json())
+        .then(res => {
+            document.getElementById('visits').innerText = res.value;
+        })
+        .catch(() => {
+            document.getElementById('visits').innerText = '1+';
+        });
+</script>
 
 </body>
 </html>
