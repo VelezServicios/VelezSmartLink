@@ -4,216 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vélez SmartLink - Innovación NFC</title>
-    <!-- Enlace a la librería FontAwesome para íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #0a1f44 0%, #0077b6 100%);
+            background-color: #007bb6;
             color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            text-align: center;
         }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: rgba(10, 31, 68, 0.8);
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
         }
-        .logo-img {
-            max-width: 220px;
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .logo img {
+            max-width: 200px;
             height: auto;
-            margin-bottom: 5px;
         }
         nav {
             display: flex;
-            gap: 30px;
-            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
         }
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-        }
-        nav a i {
-            font-size: 20px;
-        }
-        nav a:hover {
-            color: #87ceeb;
-        }
-        main {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px 60px;
-            flex-grow: 1;
-            flex-wrap: wrap;
-        }
-        .text-section {
-            max-width: 50%;
-            flex: 1;
-            min-width: 300px;
-            order: 1;
         }
         h1 {
-            font-size: 50px;
-            margin-bottom: 20px;
-            line-height: 1.2;
+            font-size: 28px;
+            margin-bottom: 10px;
         }
-        .lema {
-            font-size: 24px;
-            color: #87ceeb;
-            margin-bottom: 30px;
-            display: block;
-        }
-        .descripcion {
+        h2 {
             font-size: 18px;
-            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
             margin-bottom: 40px;
-            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .image-section {
-            max-width: 45%;
-            flex: 1;
-            min-width: 300px;
-            text-align: right;
-            order: 2;
+        h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff;
         }
-        .main-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* Estilos del contador de visitas */
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: rgba(10, 31, 68, 0.6);
-            font-size: 14px;
-            color: #87ceeb;
-        }
-        .visit-counter {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 8px 18px;
-            border-radius: 20px;
-            backdrop-filter: blur(5px);
-            font-weight: bold;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 15px;
-            }
-            .logo-img {
-                margin-bottom: 10px;
-            }
-            nav {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                gap: 20px;
-                width: 100%;
-                flex-wrap: wrap;
-            }
-            nav a {
-                margin: 0;
-                font-size: 14px;
-                flex-direction: column;
-                gap: 5px;
-            }
-            nav a i {
-                font-size: 18px;
-            }
-            main {
-                text-align: center;
-                padding: 20px;
-                flex-direction: column;
-            }
-            .text-section {
-                max-width: 100%;
-                margin-top: 10px;
-                order: 1;
-            }
-            .image-section {
-                max-width: 100%;
-                margin-top: 30px;
-                order: 2;
-                text-align: center;
-            }
-            h1 {
-                font-size: 35px;
-            }
-            .lema {
-                font-size: 18px;
-            }
+        video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div>
-        <img src="NoFondoLogoVelez.png" alt="Logo Vélez SmartLink" class="logo-img">
+<div class="container">
+    <div class="logo">
+        <img src="VelezLogo.jpg" alt="Logo Vélez SmartLink">
     </div>
+    
     <nav>
-        <a href="https://wa.me/5666140182" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="https://www.facebook.com/share/1C3goSpDkD/" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-facebook"></i> Facebook
-        </a>
-        <a href="https://www.instagram.com/_velez_smartlink_?stkn=MXZla3RmZ3RxNTC=" target="_blank">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a href="Servicios.html">
-            <i class="fas fa-star"></i> Servicios
-        </a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="Servicios.html">Servicios</a>
     </nav>
-</header>
 
-<main>
-    <div class="text-section">
-        <h1>Innovación NFC con conectividad total</h1>
-        <span class="lema">Impulsando tu negocio hacia el futuro digital</span>
-        <p class="descripcion">
-            Tarjetas NFC para reseñas, exhibidores NFC y sitios web para negocios. 
-            Conectamos a tus clientes con tu perfil digital al instante.
-        </p>
-    </div>
-    <div class="image-section">
-        <img src="FotosWeb.gif" alt="Imagen Principal de la Empresa" class="main-img">
-    </div>
-</main>
+    <h1>Innovación NFC con conectividad total</h1>
+    <h2>Impulsando tu negocio hacia el futuro digital</h2>
+    <p>Tarjetas NFC para reseñas, exhibidores NFC y sitios web para negocios. Conectamos a tus clientes con tu perfil digital al instante.</p>
 
-<footer>
-    <div class="visit-counter">
-        👁️ Visitas totales: <span id="visits">Cargando...</span>
-    </div>
-</footer>
-
-<script>
-    // Contador de visitas para la página principal
-    fetch('https://countapi.mileshilliard.com/api/v1/hit/velezsmartlink-index')
-        .then(res => res.json())
-        .then(res => {
-            document.getElementById('visits').innerText = res.value;
-        })
-        .catch(() => {
-            document.getElementById('visits').innerText = '1+';
-        });
-</script>
+    <h3>¿Cómo funcionan nuestros productos?</h3>
+    <video controlslist="nodownload" autoplay muted loop playsinline>
+        <source src="VideoWeb.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+</div>
 
 </body>
 </html>
