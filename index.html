@@ -52,17 +52,22 @@
         }
         main {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
             padding: 40px 60px;
             flex-grow: 1;
+            gap: 40px;
+        }
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
+            gap: 40px;
         }
         .text-section {
             max-width: 50%;
             flex: 1;
             min-width: 300px;
-            order: 1;
         }
         h1 {
             font-size: 50px;
@@ -86,7 +91,6 @@
             flex: 1;
             min-width: 300px;
             text-align: right;
-            order: 2;
         }
         .main-img {
             max-width: 100%;
@@ -94,30 +98,40 @@
             border-radius: 10px;
         }
         
-        /* Sección del video añadido */
-        .video-section {
-            width: 100%;
-            text-align: center;
-            padding: 40px 20px;
-            order: 3;
-            flex-basis: 100%;
+        /* Sección del video y texto a la izquierda */
+        .bottom-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 20px;
         }
-        .video-section h3 {
-            font-size: 28px;
-            margin-bottom: 10px;
+        .video-text-section {
+            max-width: 45%;
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+        }
+        .video-text-section h3 {
+            font-size: 32px;
+            margin-bottom: 15px;
             color: #ffffff;
         }
-        .video-text {
+        .video-text-section p {
             font-size: 18px;
             color: #87ceeb;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
+            line-height: 1.5;
+        }
+        .video-container-section {
+            max-width: 50%;
+            flex: 1;
+            min-width: 300px;
+            text-align: right;
         }
         .video-container {
-            max-width: 700px;
+            width: 100%;
+            max-width: 600px;
             margin: 0 auto;
             border-radius: 12px;
             overflow: hidden;
@@ -136,6 +150,7 @@
             background-color: rgba(10, 31, 68, 0.6);
             font-size: 14px;
             color: #87ceeb;
+            margin-top: auto;
         }
         .visit-counter {
             display: inline-block;
@@ -174,31 +189,39 @@
             main {
                 text-align: center;
                 padding: 20px;
+                gap: 30px;
+            }
+            .top-section {
                 flex-direction: column;
+                text-align: center;
             }
             .text-section {
                 max-width: 100%;
                 margin-top: 10px;
-                order: 1;
             }
             .image-section {
                 max-width: 100%;
-                margin-top: 30px;
-                order: 2;
                 text-align: center;
             }
-            .video-section {
-                order: 3;
-                padding: 20px 10px;
+            .bottom-section {
+                flex-direction: column;
+                text-align: center;
             }
-            .video-section h3 {
-                font-size: 24px;
+            .video-text-section {
+                max-width: 100%;
+                text-align: center;
+            }
+            .video-container-section {
+                max-width: 100%;
             }
             h1 {
                 font-size: 35px;
             }
             .lema {
                 font-size: 18px;
+            }
+            .video-text-section h3 {
+                font-size: 24px;
             }
         }
     </style>
@@ -226,28 +249,32 @@
 </header>
 
 <main>
-    <div class="text-section">
-        <h1>Innovación NFC con conectividad total</h1>
-        <span class="lema">Impulsando tu negocio hacia el futuro digital</span>
-        <p class="descripcion">
-            Tarjetas NFC para reseñas, exhibidores NFC y sitios web para negocios. 
-            Conectamos a tus clientes con tu perfil digital al instante.
-        </p>
-    </div>
-    <div class="image-section">
-        <img src="FotosWeb.gif" alt="Imagen Principal de la Empresa" class="main-img">
+    <div class="top-section">
+        <div class="text-section">
+            <h1>Innovación NFC con conectividad total</h1>
+            <span class="lema">Impulsando tu negocio hacia el futuro digital</span>
+            <p class="descripcion">
+                Tarjetas NFC para reseñas, exhibidores NFC y sitios web para negocios. 
+                Conectamos a tus clientes con tu perfil digital al instante.
+            </p>
+        </div>
+        <div class="image-section">
+            <img src="FotosWeb.gif" alt="Imagen Principal de la Empresa" class="main-img">
+        </div>
     </div>
 
-    <div class="video-section">
-        <h3>¿Cómo funcionan nuestros productos?</h3>
-        <p class="video-text">
-            Aquí te mostramos cómo <i class="fas fa-arrow-right"></i>
-        </p>
-        <div class="video-container">
-            <video autoplay muted loop playsinline controlslist="nodownload">
-                <source src="VideoWeb.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
+    <div class="bottom-section">
+        <div class="video-text-section">
+            <h3>¿Cómo funcionan nuestros productos?</h3>
+            <p>Aquí te mostramos cómo</p>
+        </div>
+        <div class="video-container-section">
+            <div class="video-container">
+                <video autoplay muted loop playsinline controlslist="nodownload">
+                    <source src="VideoWeb.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+            </div>
         </div>
     </div>
 </main>
