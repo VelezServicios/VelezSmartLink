@@ -98,7 +98,7 @@
             border-radius: 10px;
         }
         
-        /* Sección del video y texto a la izquierda */
+        /* Sección del video a la derecha y texto a la izquierda */
         .bottom-section {
             display: flex;
             justify-content: space-between;
@@ -281,19 +281,19 @@
 
 <footer>
     <div class="visit-counter">
-        👁️ Visitas totales: <span id="visits">Cargando...</span>
+        👁️ Visitas totales: <span id="visits">0</span>
     </div>
 </footer>
 
 <script>
-    fetch('https://api.countapi.xyz/hit/velezsmartlink-index/visitas')
-        .then(res => res.json())
-        .then(res => {
-            document.getElementById('visits').innerText = res.value;
-        })
-        .catch(() => {
-            document.getElementById('visits').innerText = '1+';
-        });
+    // Contador de visitas local
+    let visits = localStorage.getItem('visitCount');
+    if (visits === null) {
+        visits = 0;
+    }
+    visits = Number(visits) + 1;
+    localStorage.setItem('visitCount', visits);
+    document.getElementById('visits').innerText = visits;
 </script>
 
 </body>
