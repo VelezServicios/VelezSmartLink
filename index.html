@@ -114,23 +114,6 @@
             line-height: 1.5;
         }
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: rgba(10, 31, 68, 0.6);
-            font-size: 14px;
-            color: #87ceeb;
-            margin-top: auto;
-        }
-        .visit-counter {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 8px 18px;
-            border-radius: 20px;
-            backdrop-filter: blur(5px);
-            font-weight: bold;
-        }
-
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -237,25 +220,6 @@
         </div>
     </div>
 </main>
-
-<footer>
-    <div class="visit-counter">
-        👁️ Visitas totales: <span id="visits">...</span>
-    </div>
-</footer>
-
-<script>
-    fetch('https://api.counterapi.dev/v1/velezsmartlink/index/up')
-        .then(response => response.json())
-        .then(data => {
-            const countValue = data.count !== undefined ? data.count : (data.value !== undefined ? data.value : (data.data !== undefined ? data.data : 'Error'));
-            document.getElementById('visits').innerText = countValue;
-        })
-        .catch(error => {
-            console.error('Error al obtener las visitas:', error);
-            document.getElementById('visits').innerText = 'N/A';
-        });
-</script>
 
 </body>
 </html>
