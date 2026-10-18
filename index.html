@@ -104,8 +104,17 @@
         }
         .video-section h3 {
             font-size: 28px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             color: #ffffff;
+        }
+        .video-text {
+            font-size: 18px;
+            color: #87ceeb;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
         .video-container {
             max-width: 700px;
@@ -231,6 +240,9 @@
 
     <div class="video-section">
         <h3>¿Cómo funcionan nuestros productos?</h3>
+        <p class="video-text">
+            Aquí te mostramos cómo <i class="fas fa-arrow-right"></i>
+        </p>
         <div class="video-container">
             <video autoplay muted loop playsinline controlslist="nodownload">
                 <source src="VideoWeb.mp4" type="video/mp4">
@@ -247,7 +259,7 @@
 </footer>
 
 <script>
-    fetch('https://api.cvc.li/hit/velezsmartlink-index/visitas')
+    fetch('https://api.countapi.xyz/hit/velezsmartlink-index/visitas')
         .then(res => res.json())
         .then(res => {
             document.getElementById('visits').innerText = res.value;
