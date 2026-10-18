@@ -56,14 +56,14 @@
             flex-grow: 1;
             gap: 40px;
         }
-        .top-section {
+        .top-section, .bottom-section {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 40px;
         }
-        .text-section {
+        .text-section, .gif-text-section {
             max-width: 50%;
             flex: 1;
             min-width: 300px;
@@ -85,31 +85,23 @@
             margin-bottom: 40px;
             opacity: 0.9;
         }
-        .image-section {
+        .image-section, .gif-container-section {
             max-width: 45%;
             flex: 1;
             min-width: 300px;
             text-align: right;
         }
-        .main-img {
-            max-width: 100%;
+        .main-img, .gif-container img {
+            width: 100%;
             height: auto;
             border-radius: 10px;
+            display: block;
         }
-        
-        .bottom-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-top: 20px;
-        }
-        .gif-text-section {
-            max-width: 45%;
-            flex: 1;
-            min-width: 300px;
-            text-align: left;
+        .gif-container {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
         }
         .gif-text-section h3 {
             font-size: 40px;
@@ -120,25 +112,6 @@
             font-size: 24px;
             color: #87ceeb;
             line-height: 1.5;
-        }
-        .gif-container-section {
-            max-width: 50%;
-            flex: 1;
-            min-width: 300px;
-            text-align: right;
-        }
-        .gif-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-        }
-        .gif-container img {
-            width: 100%;
-            height: auto;
-            display: block;
         }
 
         footer {
@@ -188,28 +161,17 @@
                 padding: 20px;
                 gap: 30px;
             }
-            .top-section {
+            .top-section, .bottom-section {
                 flex-direction: column;
                 text-align: center;
             }
-            .text-section {
+            .text-section, .gif-text-section {
                 max-width: 100%;
                 margin-top: 10px;
             }
-            .image-section {
+            .image-section, .gif-container-section {
                 max-width: 100%;
                 text-align: center;
-            }
-            .bottom-section {
-                flex-direction: column;
-                text-align: center;
-            }
-            .gif-text-section {
-                max-width: 100%;
-                text-align: center;
-            }
-            .gif-container-section {
-                max-width: 100%;
             }
             h1 {
                 font-size: 35px;
@@ -286,7 +248,8 @@
     fetch('https://api.counterapi.dev/v1/velezsmartlink/index/up')
         .then(response => response.json())
         .then(data => {
-            document.getElementById('visits').innerText = data.count || data.value;
+            const countValue = data.count !== undefined ? data.count : (data.value !== undefined ? data.value : (data.data !== undefined ? data.data : 'Error'));
+            document.getElementById('visits').innerText = countValue;
         })
         .catch(error => {
             console.error('Error al obtener las visitas:', error);
