@@ -93,6 +93,32 @@
             height: auto;
             border-radius: 10px;
         }
+        
+        /* Sección del video añadido */
+        .video-section {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            order: 3;
+            flex-basis: 100%;
+        }
+        .video-section h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .video-container {
+            max-width: 700px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
         /* Estilos del contador de visitas */
         footer {
@@ -152,6 +178,13 @@
                 order: 2;
                 text-align: center;
             }
+            .video-section {
+                order: 3;
+                padding: 20px 10px;
+            }
+            .video-section h3 {
+                font-size: 24px;
+            }
             h1 {
                 font-size: 35px;
             }
@@ -194,6 +227,17 @@
     </div>
     <div class="image-section">
         <img src="FotosWeb.gif" alt="Imagen Principal de la Empresa" class="main-img">
+    </div>
+
+    <!-- Sección de video añadida debajo del GIF y textos, totalmente adaptada para computadoras y celulares -->
+    <div class="video-section">
+        <h3>¿Cómo funcionan nuestros productos?</h3>
+        <div class="video-container">
+            <video autoplay muted loop playsinline controlslist="nodownload">
+                <source src="VideoWeb.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
     </div>
 </main>
 
