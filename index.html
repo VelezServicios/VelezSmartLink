@@ -98,7 +98,7 @@
             border-radius: 10px;
         }
         
-        /* Sección del video a la derecha y texto a la izquierda */
+        /* Sección inferior con texto a la izquierda e imagen GIF a la derecha */
         .bottom-section {
             display: flex;
             justify-content: space-between;
@@ -107,29 +107,29 @@
             gap: 40px;
             margin-top: 20px;
         }
-        .video-text-section {
+        .gif-text-section {
             max-width: 45%;
             flex: 1;
             min-width: 300px;
             text-align: left;
         }
-        .video-text-section h3 {
+        .gif-text-section h3 {
             font-size: 32px;
             margin-bottom: 15px;
             color: #ffffff;
         }
-        .video-text-section p {
+        .gif-text-section p {
             font-size: 18px;
             color: #87ceeb;
             line-height: 1.5;
         }
-        .video-container-section {
+        .gif-container-section {
             max-width: 50%;
             flex: 1;
             min-width: 300px;
             text-align: right;
         }
-        .video-container {
+        .gif-container {
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
@@ -137,7 +137,7 @@
             overflow: hidden;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
         }
-        .video-container video {
+        .gif-container img {
             width: 100%;
             height: auto;
             display: block;
@@ -207,11 +207,11 @@
                 flex-direction: column;
                 text-align: center;
             }
-            .video-text-section {
+            .gif-text-section {
                 max-width: 100%;
                 text-align: center;
             }
-            .video-container-section {
+            .gif-container-section {
                 max-width: 100%;
             }
             h1 {
@@ -220,7 +220,7 @@
             .lema {
                 font-size: 18px;
             }
-            .video-text-section h3 {
+            .gif-text-section h3 {
                 font-size: 24px;
             }
         }
@@ -264,16 +264,13 @@
     </div>
 
     <div class="bottom-section">
-        <div class="video-text-section">
+        <div class="gif-text-section">
             <h3>¿Cómo funcionan nuestros productos?</h3>
             <p>Aquí te mostramos cómo</p>
         </div>
-        <div class="video-container-section">
-            <div class="video-container">
-                <video autoplay muted loop playsinline controlslist="nodownload">
-                    <source src="VideoWeb.mp4" type="video/mp4">
-                    Tu navegador no soporta la reproducción de video.
-                </video>
+        <div class="gif-container-section">
+            <div class="gif-container">
+                <img src="VideoWeb.gif" alt="Demostración de productos Vélez SmartLink">
             </div>
         </div>
     </div>
@@ -281,19 +278,21 @@
 
 <footer>
     <div class="visit-counter">
-        👁️ Visitas totales: <span id="visits">0</span>
+        👁️ Visitas totales: <span id="visits">...</span>
     </div>
 </footer>
 
 <script>
-    // Contador de visitas local
-    let visits = localStorage.getItem('visitCount');
-    if (visits === null) {
-        visits = 0;
-    }
-    visits = Number(visits) + 1;
-    localStorage.setItem('visitCount', visits);
-    document.getElementById('visits').innerText = visits;
+    // Contador de visitas global utilizando CountAPI
+    fetch('https://api.countapi.xyz/hit/velezsmartlink-index/visitas')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('visits').innerText = data.value;
+        })
+        .catch(error => {
+            console.error('Error al obtener las visitas:', error);
+            document.getElementById('visits').innerText = 'N/A';
+        });
 </script>
 
 </body>
