@@ -229,7 +229,6 @@
         <img src="FotosWeb.gif" alt="Imagen Principal de la Empresa" class="main-img">
     </div>
 
-    <!-- Sección de video añadida debajo del GIF y textos -->
     <div class="video-section">
         <h3>¿Cómo funcionan nuestros productos?</h3>
         <div class="video-container">
@@ -248,8 +247,7 @@
 </footer>
 
 <script>
-    // Contador de visitas para la página principal
-    fetch('https://api.countapi.xyz/hit/velezsmartlink-index/visitas')
+    fetch('https://api.cvc.li/hit/velezsmartlink-index/visitas')
         .then(res => res.json())
         .then(res => {
             document.getElementById('visits').innerText = res.value;
