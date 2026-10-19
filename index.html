@@ -238,24 +238,5 @@
     </div>
 </main>
 
-<footer>
-    <div class="visit-counter">
-        👁️ Visitas totales: <span id="visits">...</span>
-    </div>
-</footer>
-
-<script>
-    fetch('https://api.counterapi.dev/v1/velezsmartlink/index/up')
-        .then(response => response.json())
-        .then(data => {
-            const countValue = data.count !== undefined ? data.count : (data.value !== undefined ? data.value : (data.data !== undefined ? data.data : 'Error'));
-            document.getElementById('visits').innerText = countValue;
-        })
-        .catch(error => {
-            console.error('Error al obtener las visitas:', error);
-            document.getElementById('visits').innerText = 'N/A';
-        });
-</script>
-
 </body>
 </html>
