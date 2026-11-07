@@ -11,22 +11,6 @@
             padding: 10px;
             background-color: #f4f4f9;
             color: #333;
-Aquí tienes el código completo en un bloque separado para copiarlo fácilmente.
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Precios - Vélez SmartLink</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 10px;
-            background-color: #f4f4f9;
-            color: #333;
             font-size: 14px;
         }
         .container {
@@ -48,8 +32,8 @@ Aquí tienes el código completo en un bloque separado para copiarlo fácilmente
         h1 {
             text-align: center;
             color: #1a252c;
-            margin-bottom: 5px;
-            font-size: 20px;
+            margin-bottom: 15px;
+            font-size: 2em; /* Doble de tamaño */
         }
         h2 {
             background-color: #4267B2;
@@ -58,7 +42,7 @@ Aquí tienes el código completo en un bloque separado para copiarlo fácilmente
             margin-top: 20px;
             margin-bottom: 10px;
             border-radius: 4px;
-            font-size: 16px;
+            font-size: 1.5em; /* 1.5 veces más grande */
             text-align: center;
         }
         table {
@@ -90,10 +74,6 @@ Aquí tienes el código completo en un bloque separado para copiarlo fácilmente
             color: #000;
             font-size: 1.1em;
         }
-        .price-single {
-            font-weight: bold;
-            color: #000;
-        }
         .footer-note {
             text-align: center;
             font-size: 0.8em;
@@ -112,6 +92,69 @@ Aquí tienes el código completo en un bloque separado para copiarlo fácilmente
     
     <h1>LISTA DE PRECIOS</h1>
 
+    <!-- 1. PÁGINAS WEB -->
+    <h2>Páginas Web</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>PRODUCTO</th>
+                <th>DESCRIPCIÓN</th>
+                <th>PRECIO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Menú Digital Básico</td>
+                <td>Pendiente</td>
+                <td>
+                    <span class="price-old">$1,500.00</span>
+                    <span class="price-new">$800.00</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Menú Digital Estándar</td>
+                <td>Pendiente</td>
+                <td>
+                    <span class="price-old">$1,500.00</span>
+                    <span class="price-new">$800.00</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Menú Digital Pro</td>
+                <td>Pendiente</td>
+                <td>
+                    <span class="price-old">$1,500.00</span>
+                    <span class="price-new">$800.00</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Página Integral Básica</td>
+                <td>Pendiente</td>
+                <td>
+                    <span class="price-old">$4,000.00</span>
+                    <span class="price-new">$2,500.00</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Página Integral Estándar</td>
+                <td>Pendiente</td>
+                <td>
+                    <span class="price-old">$4,000.00</span>
+                    <span class="price-new">$2,500.00</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Página Integral Pro</td>
+                <td>Pendiente</td>
+                <td>
+                    <span class="price-old">$4,000.00</span>
+                    <span class="price-new">$2,500.00</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 2. TARJETAS NFC -->
     <h2>Tarjetas NFC</h2>
     <table>
         <thead>
@@ -128,6 +171,7 @@ Aquí tienes el código completo en un bloque separado para copiarlo fácilmente
                 <td>
                     <span class="price-old">$200.00</span>
                     <span class="price-new">$160.00</span>
+                </td>
             </tr>
             <tr>
                 <td>Tarjeta Transferencia</td>
@@ -135,6 +179,7 @@ Aquí tienes el código completo en un bloque separado para copiarlo fácilmente
                 <td>
                     <span class="price-old">$240.00</span>
                     <span class="price-new">$210.00</span>
+                </td>
             </tr>
             <tr>
                 <td>Tarjeta Personalizada</td>
@@ -142,6 +187,7 @@ Aquí tienes el código completo en un bloque separado para copiarlo fácilmente
                 <td>
                     <span class="price-old">$270.00</span>
                     <span class="price-new">$225.00</span>
+                </td>
             </tr>
             <tr>
                 <td>PROMO 6x5 Sencillas</td>
@@ -214,6 +260,7 @@ Aquí tienes el código completo en un bloque separado para copiarlo fácilmente
         </tbody>
     </table>
 
+    <!-- 3. EXHIBIDORES NFC -->
     <h2>Exhibidores NFC</h2>
     <table>
         <thead>
@@ -230,6 +277,7 @@ Aquí tienes el código completo en un bloque separado para copiarlo fácilmente
                 <td>
                     <span class="price-old">$300.00</span>
                     <span class="price-new">$250.00</span>
+                </td>
             </tr>
             <tr>
                 <td>Exhibidor Personalizado</td>
@@ -237,6 +285,7 @@ Aquí tienes el código completo en un bloque separado para copiarlo fácilmente
                 <td>
                     <span class="price-old">$400.00</span>
                     <span class="price-new">$300.00</span>
+                </td>
             </tr>
             <tr>
                 <td>PROMO 6x5 Sencillos</td>
@@ -283,7 +332,7 @@ Aquí tienes el código completo en un bloque separado para copiarlo fácilmente
                 <td>Paquete 7</td>
                 <td>
                     1 Exhibidor personalizado (GMaps)<br>
-                    1 Exhibidor personalized (Facebook)<br>
+                    1 Exhibidor personalizado (Facebook)<br>
                     1 Exhibidor personalizado (Instagram)<br>
                     1 Tarjeta personalizada (WhatsApp)<br>
                     1 Tarjeta Transferencia (Cualquier banco)
