@@ -33,7 +33,7 @@
             text-align: center;
             color: #1a252c;
             margin-bottom: 15px;
-            font-size: 2em; /* Doble de tamaño */
+            font-size: 2em;
         }
         h2 {
             background-color: #4267B2;
@@ -42,11 +42,12 @@
             margin-top: 20px;
             margin-bottom: 10px;
             border-radius: 4px;
-            font-size: 1.5em; /* 1.5 veces más grande */
+            font-size: 1.5em;
             text-align: center;
         }
         table {
             width: 100%;
+            table-layout: fixed; /* Mantiene la proporción fija de columnas */
             border-collapse: collapse;
             margin-bottom: 20px;
             font-size: 12px;
@@ -62,6 +63,16 @@
             background-color: #87ceeb;
             color: white;
             font-size: 13px;
+        }
+        /* Asignación de anchos a cada columna */
+        th:nth-child(1), td:nth-child(1) {
+            width: 25%;
+        }
+        th:nth-child(2), td:nth-child(2) {
+            width: 55%;
+        }
+        th:nth-child(3), td:nth-child(3) {
+            width: 20%;
         }
         .price-old {
             text-decoration: line-through;
@@ -124,7 +135,7 @@
                 <td>Pendiente</td>
                 <td>
                     <span class="price-old">$1,500.00</span>
-                    <span class="price-new">$1200.00</span>
+                    <span class="price-new">$1,200.00</span>
                 </td>
             </tr>
             <tr>
