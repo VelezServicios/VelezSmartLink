@@ -45,9 +45,28 @@
             font-size: 1.5em;
             text-align: center;
         }
+        .section-title-wrapper {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .section-title {
+            background-color: #4267B2;
+            color: white;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 1.5em;
+            display: inline-block;
+        }
+        .section-note {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block;
+        }
         table {
             width: 100%;
-            table-layout: fixed; /* Mantiene la proporción fija de columnas */
+            table-layout: fixed;
             border-collapse: collapse;
             margin-bottom: 20px;
             font-size: 12px;
@@ -64,7 +83,6 @@
             color: white;
             font-size: 13px;
         }
-        /* Asignación de anchos a cada columna */
         th:nth-child(1), td:nth-child(1) {
             width: 25%;
         }
@@ -104,7 +122,12 @@
     <h1>LISTA DE PRECIOS</h1>
 
     <!-- 1. PÁGINAS WEB -->
-    <h2>Páginas Web</h2>
+    <div class="section-title-wrapper">
+        <div class="section-title">
+            Páginas Web
+            <span class="section-note">(pago único, no requiere renta mensual)</span>
+        </div>
+    </div>
     <table>
         <thead>
             <tr>
@@ -140,7 +163,7 @@
             </tr>
             <tr>
                 <td>Página Integral Básica</td>
-                <td>Página web con logotipo y acceso directo a WhatsApp, Facebook y calificación en Maps.</td>
+                <td>Página web con logotipo y acceso directo a WhatsApp, Facebook y reseña en Google Maps.</td>
                 <td>
                     <span class="price-old">$2,500.00</span>
                     <span class="price-new">$2,000.00</span>
@@ -148,7 +171,7 @@
             </tr>
             <tr>
                 <td>Página Integral Estándar</td>
-                <td>Página web con logotipo y acceso directo a pago con transferencia, WhatsApp, Facebook, menú/catálogo.</td>
+                <td>Página web con logotipo y acceso directo a pago con transferencia, WhatsApp, Facebook, menú/catálogo y reseña en Google Maps.</td>
                 <td>
                     <span class="price-old">$3,000.00</span>
                     <span class="price-new">$2,500.00</span>
@@ -156,7 +179,7 @@
             </tr>
             <tr>
                 <td>Página Integral Pro</td>
-                <td>Página web con logotipo, colores personalizados, acceso directo a pago con transferencia, WhatsApp, Facebook, Instagram, menú/catálogo.</td>
+                <td>Página web con logotipo, colores personalizados, acceso directo a pago con transferencia, WhatsApp, Facebook, Instagram, menú/catálogo, reseña en Google Maps, incrustación de mapas, mostrar otras sucursales y múltiples detalles totalmente personalizables.</td>
                 <td>
                     <span class="price-old">$4,000.00</span>
                     <span class="price-new">$3,000.00</span>
