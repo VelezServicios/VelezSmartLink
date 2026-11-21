@@ -79,16 +79,16 @@
         th:nth-child(3), td:nth-child(3) {
             width: 20%;
         }
-        /* Precio original ahora se muestra como precio vigente */
         .price-old {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.9em;
+            display: block;
+        }
+        .price-new {
             font-weight: bold;
             color: #000;
             font-size: 1.1em;
-            display: block;
-        }
-        /* Precio de oferta oculto temporalmente */
-        .price-new {
-            display: none;
         }
         .footer-note {
             text-align: center;
@@ -126,7 +126,6 @@
                 <td>Menú Digital Básico</td>
                 <td>Página visual sencilla con nombre de producto y precio (Plantilla Básica, sin ímagenes)</td>
                 <td>
-                    <span class="price-old">$800.00</span>
                     <span class="price-new">$500.00</span>
                 </td>
             </tr>
@@ -134,7 +133,6 @@
                 <td>Menú Digital Estándar</td>
                 <td>Página visual con categorias, nombre de producto y precio (Plantilla estándar, con colores personalizados, emojis y sin ímagenes)</td>
                 <td>
-                    <span class="price-old">$1,100.00</span>
                     <span class="price-new">$800.00</span>
                 </td>
             </tr>
@@ -142,7 +140,6 @@
                 <td>Menú Digital Pro</td>
                 <td>Página visual con categorias, nombre de producto, descripcion y precio. (Plantilla Perzonalizable, Con colores personalizados e ímagenes)</td>
                 <td>
-                    <span class="price-old">$1,500.00</span>
                     <span class="price-new">$1,200.00</span>
                 </td>
             </tr>
@@ -150,7 +147,6 @@
                 <td>Página Integral Básica</td>
                 <td>Página web con logotipo y acceso directo a WhatsApp, Facebook y reseña en Google Maps.</td>
                 <td>
-                    <span class="price-old">$2,500.00</span>
                     <span class="price-new">$2,000.00</span>
                 </td>
             </tr>
@@ -158,7 +154,6 @@
                 <td>Página Integral Estándar</td>
                 <td>Página web con logotipo y acceso directo a pago con transferencia, WhatsApp, Facebook, menú/catálogo y reseña en Google Maps.</td>
                 <td>
-                    <span class="price-old">$3,000.00</span>
                     <span class="price-new">$2,500.00</span>
                 </td>
             </tr>
@@ -166,7 +161,6 @@
                 <td>Página Integral Pro</td>
                 <td>Página web con logotipo, colores personalizados, acceso directo a pago con transferencia, WhatsApp, Facebook, Instagram, menú/catálogo, reseña en Google Maps, incrustación de mapas, mostrar otras sucursales y múltiples detalles totalmente personalizables.</td>
                 <td>
-                    <span class="price-old">$4,000.00</span>
                     <span class="price-new">$3,000.00</span>
                 </td>
             </tr>
@@ -188,7 +182,6 @@
                 <td>Tarjeta sencilla</td>
                 <td>Tarjeta con fondo color blanco y logo de App</td>
                 <td>
-                    <span class="price-old">$200.00</span>
                     <span class="price-new">$160.00</span>
                 </td>
             </tr>
@@ -196,7 +189,6 @@
                 <td>Tarjeta Transferencia</td>
                 <td>Tarjeta con fondo color adaptado y logo de Banco</td>
                 <td>
-                    <span class="price-old">$240.00</span>
                     <span class="price-new">$210.00</span>
                 </td>
             </tr>
@@ -204,7 +196,6 @@
                 <td>Tarjeta Personalizada</td>
                 <td>Tarjeta QR, fondo y logo personalizado</td>
                 <td>
-                    <span class="price-old">$270.00</span>
                     <span class="price-new">$225.00</span>
                 </td>
             </tr>
@@ -294,7 +285,6 @@
                 <td>Exhibidor sencillo</td>
                 <td>Exhibidor con fondo color blanco y logo de App</td>
                 <td>
-                    <span class="price-old">$300.00</span>
                     <span class="price-new">$250.00</span>
                 </td>
             </tr>
@@ -302,7 +292,6 @@
                 <td>Exhibidor Personalizado</td>
                 <td>Exhibidor con QR, fondo y logo personalizado</td>
                 <td>
-                    <span class="price-old">$400.00</span>
                     <span class="price-new">$300.00</span>
                 </td>
             </tr>
@@ -366,7 +355,7 @@
 
     <div class="footer-note">
         RECUERDE AGENDAR SU CITA, PARA RECIBIR UN DESCUENTO ADICIONAL. SI YA LE REALIZAMOS PRESUPUESTO Y NUESTRAS TARIFAS SUBEN LE RESPETAMOS PRECIO.<br>
-        Vigencia 31/12/2026.
+        Vigencia 11/11/2026.
     </div>
 </div>
 
