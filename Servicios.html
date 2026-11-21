@@ -79,16 +79,16 @@
         th:nth-child(3), td:nth-child(3) {
             width: 20%;
         }
+        /* Precio original ahora se muestra como precio vigente */
         .price-old {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 0.9em;
-            display: block;
-        }
-        .price-new {
             font-weight: bold;
             color: #000;
             font-size: 1.1em;
+            display: block;
+        }
+        /* Precio de oferta oculto temporalmente */
+        .price-new {
+            display: none;
         }
         .footer-note {
             text-align: center;
@@ -366,7 +366,7 @@
 
     <div class="footer-note">
         RECUERDE AGENDAR SU CITA, PARA RECIBIR UN DESCUENTO ADICIONAL. SI YA LE REALIZAMOS PRESUPUESTO Y NUESTRAS TARIFAS SUBEN LE RESPETAMOS PRECIO.<br>
-        Vigencia 11/11/2026.
+        Vigencia 31/12/2026.
     </div>
 </div>
 
