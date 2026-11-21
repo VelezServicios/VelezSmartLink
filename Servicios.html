@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+<head>    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Precios - Vélez SmartLink</title>
     <style>
@@ -64,6 +63,7 @@
             border: 1px solid #4267B2;
             word-wrap: break-word;
             overflow-wrap: break-word;
+            hyphens: none;
         }
         th {
             background-color: #87ceeb;
@@ -71,10 +71,12 @@
             font-size: 13px;
         }
         th:nth-child(1), td:nth-child(1) {
-            width: 25%;
+            width: 28%;
+            font-weight: bold;
+            white-space: normal;
         }
         th:nth-child(2), td:nth-child(2) {
-            width: 55%;
+            width: 52%;
         }
         th:nth-child(3), td:nth-child(3) {
             width: 20%;
@@ -86,6 +88,11 @@
             display: block;
         }
         .price-new {
+            font-weight: bold;
+            color: #000;
+            font-size: 1.1em;
+        }
+        .price-single {
             font-weight: bold;
             color: #000;
             font-size: 1.1em;
@@ -124,44 +131,44 @@
         <tbody>
             <tr>
                 <td>Menú Digital Básico</td>
-                <td>Página visual sencilla con nombre de producto y precio (Plantilla Básica, sin ímagenes)</td>
+                <td>Página visual sencilla con nombre de producto y precio (Plantilla Básica, sin imágenes)</td>
                 <td>
-                    <span class="price-new">$500.00</span>
+                    <span class="price-single">$800.00</span>
                 </td>
             </tr>
             <tr>
                 <td>Menú Digital Estándar</td>
-                <td>Página visual con categorias, nombre de producto y precio (Plantilla estándar, con colores personalizados, emojis y sin ímagenes)</td>
+                <td>Página visual con categorías, nombre de producto y precio (Plantilla estándar, con colores personalizados, emojis y sin imágenes)</td>
                 <td>
-                    <span class="price-new">$800.00</span>
+                    <span class="price-single">$1,100.00</span>
                 </td>
             </tr>
             <tr>
                 <td>Menú Digital Pro</td>
-                <td>Página visual con categorias, nombre de producto, descripcion y precio. (Plantilla Perzonalizable, Con colores personalizados e ímagenes)</td>
+                <td>Página visual con categorías, nombre de producto, descripción y precio. (Plantilla Personalizable, con colores personalizados e imágenes)</td>
                 <td>
-                    <span class="price-new">$1,200.00</span>
+                    <span class="price-single">$1,500.00</span>
                 </td>
             </tr>
             <tr>
                 <td>Página Integral Básica</td>
                 <td>Página web con logotipo y acceso directo a WhatsApp, Facebook y reseña en Google Maps.</td>
                 <td>
-                    <span class="price-new">$2,000.00</span>
+                    <span class="price-single">$2,500.00</span>
                 </td>
             </tr>
             <tr>
                 <td>Página Integral Estándar</td>
                 <td>Página web con logotipo y acceso directo a pago con transferencia, WhatsApp, Facebook, menú/catálogo y reseña en Google Maps.</td>
                 <td>
-                    <span class="price-new">$2,500.00</span>
+                    <span class="price-single">$3,000.00</span>
                 </td>
             </tr>
             <tr>
                 <td>Página Integral Pro</td>
                 <td>Página web con logotipo, colores personalizados, acceso directo a pago con transferencia, WhatsApp, Facebook, Instagram, menú/catálogo, reseña en Google Maps, incrustación de mapas, mostrar otras sucursales y múltiples detalles totalmente personalizables.</td>
                 <td>
-                    <span class="price-new">$3,000.00</span>
+                    <span class="price-single">$4,000.00</span>
                 </td>
             </tr>
         </tbody>
@@ -182,21 +189,21 @@
                 <td>Tarjeta sencilla</td>
                 <td>Tarjeta con fondo color blanco y logo de App</td>
                 <td>
-                    <span class="price-new">$160.00</span>
+                    <span class="price-single">$200.00</span>
                 </td>
             </tr>
             <tr>
                 <td>Tarjeta Transferencia</td>
                 <td>Tarjeta con fondo color adaptado y logo de Banco</td>
                 <td>
-                    <span class="price-new">$210.00</span>
+                    <span class="price-single">$240.00</span>
                 </td>
             </tr>
             <tr>
                 <td>Tarjeta Personalizada</td>
                 <td>Tarjeta QR, fondo y logo personalizado</td>
                 <td>
-                    <span class="price-new">$225.00</span>
+                    <span class="price-single">$270.00</span>
                 </td>
             </tr>
             <tr>
@@ -204,7 +211,7 @@
                 <td>6 tarjetas sencillas iguales al precio de 5</td>
                 <td>
                     <span class="price-old">$1200.00</span>
-                    <span class="price-new">$800.00</span>
+                    <span class="price-new">$1000.00</span>
                 </td>
             </tr>
             <tr>
@@ -285,19 +292,19 @@
                 <td>Exhibidor sencillo</td>
                 <td>Exhibidor con fondo color blanco y logo de App</td>
                 <td>
-                    <span class="price-new">$250.00</span>
+                    <span class="price-single">$300.00</span>
                 </td>
             </tr>
             <tr>
                 <td>Exhibidor Personalizado</td>
                 <td>Exhibidor con QR, fondo y logo personalizado</td>
                 <td>
-                    <span class="price-new">$300.00</span>
+                    <span class="price-single">$400.00</span>
                 </td>
             </tr>
             <tr>
-                <td>PROMO 6x5 Sencillos</td>
-                <td>6 exhibidores sencillos iguales al precio de 5</td>
+                <td>PROMO 6x5 Sencillas</td>
+                <td>6 exhibidores sencillos iguais al precio de 5</td>
                 <td>
                     <span class="price-old">$1800.00</span>
                     <span class="price-new">$1250.00</span>
@@ -305,7 +312,7 @@
             </tr>
             <tr>
                 <td>PROMO 6x5 Personalizados</td>
-                <td>6 exhibidores personalizados iguales al precio de 5</td>
+                <td>6 exhibidores personalizados iguais al precio de 5</td>
                 <td>
                     <span class="price-old">$2400.00</span>
                     <span class="price-new">$1500.00</span>
